@@ -127,4 +127,5 @@ The numbers come from the workflow's run records and the notes we wrote at the t
 - [quaternion の z を yaw だと思っていませんか / quaternion z is not yaw](https://qiita.com/TeamHayes/items/f004f15b7c0fe1f4b512)
 - [make eval が止まる・提出物が入れ替わる: スターターキットの罠と PR / starter-kit traps and fixes](https://zenn.dev/ajayaditya/articles/aichallenge-starter-kit-traps-2026)
 - [AI エージェント 100 体で学んだこと / Lessons from 100 AI agents](https://zenn.dev/ajayaditya/articles/100-ai-agents-racing-lessons)
+- [日本語が読めなくても参加できるように: ドキュメントとツールを英語対応 / Making the challenge readable without Japanese](https://qiita.com/TeamHayes/items/7aaf06afe8f39d8f6dfd)
 - ツール集 / toolkit: [aichallenge-toolkit](https://github.com/theCodeForgerHQ/aichallenge-toolkit)
