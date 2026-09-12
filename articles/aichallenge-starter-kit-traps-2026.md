@@ -136,3 +136,14 @@ Team Hayes (Ajayaditya Lokchandra, Nithisha Venkatesh). While using the JSAE AI 
 **Takeaways.** In shell scripts, look first for `|| true` and `return 0` swallowing exit codes. Give every wait an upper bound and a path that prints the cause. Before using a generated artefact (a tarball, an image), check that it is current.
 
 **How this was made.** We used AI coding agents for the investigation and the patches. Every number here comes from a reproduction that fails before the fix and passes after it; each PR lists the steps and output.
+
+---
+
+## Team Hayes の自動運転AIチャレンジ2026 シリーズ / series
+
+- [最近傍 waypoint の argmin が 1.5 m で逆向きの区間に飛ぶ / argmin snaps to the opposite leg](https://qiita.com/TeamHayes/items/2bd248ad00a8011406f4)
+- [v_max を下げたら速くなった / Lowering v_max made it faster](https://qiita.com/TeamHayes/items/934870c19786e3e6b3fe)
+- [quaternion の z を yaw だと思っていませんか / quaternion z is not yaw](https://qiita.com/TeamHayes/items/f004f15b7c0fe1f4b512)
+- [make eval が止まる・提出物が入れ替わる: スターターキットの罠と PR / starter-kit traps and fixes](https://zenn.dev/ajayaditya/articles/aichallenge-starter-kit-traps-2026)
+- [AI エージェント 100 体で学んだこと / Lessons from 100 AI agents](https://zenn.dev/ajayaditya/articles/100-ai-agents-racing-lessons)
+- ツール集 / toolkit: [aichallenge-toolkit](https://github.com/theCodeForgerHQ/aichallenge-toolkit)

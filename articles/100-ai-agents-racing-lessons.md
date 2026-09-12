@@ -117,3 +117,14 @@ Add agents when you need to **cover more ground**. When you need to **find a def
 ### How this was made
 
 The numbers come from the workflow's run records and the notes we wrote at the time. The draft was written with AI help, and the numbers were checked against those records.
+
+---
+
+## Team Hayes の自動運転AIチャレンジ2026 シリーズ / series
+
+- [最近傍 waypoint の argmin が 1.5 m で逆向きの区間に飛ぶ / argmin snaps to the opposite leg](https://qiita.com/TeamHayes/items/2bd248ad00a8011406f4)
+- [v_max を下げたら速くなった / Lowering v_max made it faster](https://qiita.com/TeamHayes/items/934870c19786e3e6b3fe)
+- [quaternion の z を yaw だと思っていませんか / quaternion z is not yaw](https://qiita.com/TeamHayes/items/f004f15b7c0fe1f4b512)
+- [make eval が止まる・提出物が入れ替わる: スターターキットの罠と PR / starter-kit traps and fixes](https://zenn.dev/ajayaditya/articles/aichallenge-starter-kit-traps-2026)
+- [AI エージェント 100 体で学んだこと / Lessons from 100 AI agents](https://zenn.dev/ajayaditya/articles/100-ai-agents-racing-lessons)
+- ツール集 / toolkit: [aichallenge-toolkit](https://github.com/theCodeForgerHQ/aichallenge-toolkit)
