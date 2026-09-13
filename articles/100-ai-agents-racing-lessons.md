@@ -22,11 +22,15 @@ Team Hayes（Ajayaditya Lokchandra, Nithisha Venkatesh）です。自動運転AI
 - 確認できた不具合 8 件は、**すべて 3 体から**見つかっていた。1 体は QP（最適化）の実装を 1 行ずつ読んだ。1 体は自分たちのスタート時のログを読んだ。1 体は他チームの公開走行ログを読んだ
 - 検証役のエージェント 90 体は、実行量の 88% を使い、成果は約 1 割だった
 
+![成果の 9 割は約 12 体から、検証エージェントは実行量の 88% / Value came from a few agents; verify agents used most of the run](https://raw.githubusercontent.com/theCodeForgerHQ/zenn-content/main/images/m10/fig1-value.png)
+
 ## 検証エージェントは不具合を見つけられない
 
 検証役は「前の段階で誰かが出した候補」しか見ません。つまり**ふるい**であって、**探索**ではありません。候補に入っていない不具合を、検証役が見つけることは構造的にありません。
 
 検証を増やせば見落としが減る、という直感は間違いでした。見落としは候補を出す段階で起きていて、検証を何倍にしても戻ってきません。
+
+![候補に入らなかった不具合は、検証では戻らない / Defects never proposed are never recovered by verification](https://raw.githubusercontent.com/theCodeForgerHQ/zenn-content/main/images/m10/m10-filter.png)
 
 ## 並列化は「網羅」の道具、バグ探しは「深さ」の問題
 
@@ -56,6 +60,8 @@ Team Hayes（Ajayaditya Lokchandra, Nithisha Venkatesh）です。自動運転AI
 - エージェントの数は仕事の形で決める: 大量の資料を探すなら探し方ごとに 2 から 5 体、自分たちのコードの不具合を探すなら 1 から 3 体に「経路全体を読め」と指示する、検証は間違えると高くつく候補だけに最大 3 体
 - 15 体を超えそうなら、1 体増やすごとに「前の 1 体が見つけられないものを何を見つけるのか」を書く。書けなければ増やさない
 - 「試して駄目だったこと」の一覧を残す。これがないと、毎回同じ案を試して回ることになる
+
+![仕事の形でエージェントの数を決める / Size the agents by the shape of the work](https://raw.githubusercontent.com/theCodeForgerHQ/zenn-content/main/images/m10/m10-sizing.png)
 
 ## OSS 貢献でも同じだった
 

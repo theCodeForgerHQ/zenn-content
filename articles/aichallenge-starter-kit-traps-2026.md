@@ -12,6 +12,8 @@ Team Hayes（Ajayaditya Lokchandra, Nithisha Venkatesh）です。自動運転AI
 
 どれも共通しているのは、**失敗しているのに成功と表示される**ことです。終了コードを捨てている、待ち時間に上限がない、古いファイルを黙って使う、の 3 パターンでした。
 
+![3 つのパターンと PR: 終了コードを捨てる、上限のない待機、古いファイルを黙って使う / Three patterns and their PRs](https://raw.githubusercontent.com/theCodeForgerHQ/zenn-content/main/images/m3/m3-patterns.png)
+
 | # | 症状 | PR | 状態 |
 |---|---|---|---|
 | 1 | `doctor` が存在しないイメージを「ある」と言う | [#276](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/276) | マージ済み |
@@ -21,6 +23,8 @@ Team Hayes（Ajayaditya Lokchandra, Nithisha Venkatesh）です。自動運転AI
 | 5 | `make download` が前回の残りの tar を展開する | [#316](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/316) | レビュー待ち |
 | 6 | `setup.bash bootstrap` が途中で止まって見える | [#318](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/318) | レビュー待ち |
 | 7 | `path_constraints_provider` が起動直後に必ず落ちる | [#315](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/315) | レビュー待ち |
+
+![修正前後: make eval の待機、make download の展開、topic_check の終了コード / Before and after for #317, #316 and #319](https://raw.githubusercontent.com/theCodeForgerHQ/zenn-content/main/images/m3/fig2-before-after.png)
 
 ## 1. `doctor` が存在しないイメージを「ある」と言う（#276, マージ済み）
 
