@@ -17,7 +17,7 @@ Team Hayes（Ajayaditya Lokchandra, Nithisha Venkatesh）です。自動運転AI
 | # | 症状 | PR | 状態 |
 |---|---|---|---|
 | 1 | `doctor` が存在しないイメージを「ある」と言う | [#276](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/276) | マージ済み |
-| 2 | `make eval` が永遠に待つ | [#317](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/317) | レビュー待ち |
+| 2 | `make eval` が永遠に待つ | [#317](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/317) | クローズ（1 コマンドには手厚すぎるという運営の判断） |
 | 3 | topic_check が FAIL なのに PASS と集計する | [#319](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/319) | レビュー待ち |
 | 4 | `make eval` が古い提出物を黙って評価する | [#320](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/320) | レビュー待ち |
 | 5 | `make download` が前回の残りの tar を展開する | [#316](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart/pull/316) | レビュー待ち |
@@ -47,7 +47,7 @@ docker_run_no_prompt() {
 
 新しい参加者は、いちばん時間のかかる `./setup.bash pull image` と `./docker_build.sh dev` を飛ばしてよいと判断し、ずっと後で分かりにくい失敗に出会います。イメージ取得のリトライも、失敗を成功と受け取るので一度も再試行しません。docker の本当の終了コードを返すように直し、同日にマージされました。
 
-## 2. `make eval` が永遠に待つ（#317）
+## 2. `make eval` が永遠に待つ（#317, クローズ）
 
 評価コンテナが起動直後に落ちると（`install/` が空、AWSIM が未配置、launch の失敗など）、`make eval` は `awsim-request-start` の中で次の行を出したまま止まります。
 
@@ -121,7 +121,7 @@ TypeError: MPC.__init__() missing 2 required positional arguments: 'use_obstacle
 
 ## English
 
-Team Hayes (Ajayaditya Lokchandra, Nithisha Venkatesh). While using the JSAE AI Challenge 2026 starter kit ([aichallenge-racingkart](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart)) we kept hitting bugs of one kind: **it fails, but reports success**. Each one below has a PR with a reproduction test. The table above lists them; #276 is merged, the rest are awaiting review. The causes fall into three patterns: an exit code thrown away, a wait with no upper bound, and a stale file used without a word.
+Team Hayes (Ajayaditya Lokchandra, Nithisha Venkatesh). While using the JSAE AI Challenge 2026 starter kit ([aichallenge-racingkart](https://github.com/AutomotiveAIChallenge/aichallenge-racingkart)) we kept hitting bugs of one kind: **it fails, but reports success**. Each one below has a PR with a reproduction test. The table above lists them; #276 is merged, #317 was closed by the maintainer (judged too much care for a single command), and the rest are awaiting review. The causes fall into three patterns: an exit code thrown away, a wait with no upper bound, and a stale file used without a word.
 
 **1. `doctor` says images exist when they don't (#276, merged).** The four docker helpers in `setup.bash` ran docker and then `return 0` unconditionally (8 sites). On a host with no images, `doctor` still printed `✅ image exists`, so new participants skipped the two slowest setup steps, and the image-pull retry loop never retried. The helpers now return docker's real exit code.
 
