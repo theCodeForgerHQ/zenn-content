@@ -153,4 +153,4 @@ The decoder is `bagkit.v2x` in Team Hayes' aichallenge-toolkit (Apache-2.0): `pi
 ### How this was made
 
 We used AI coding agents to build the decoder and draft this article. The numbers are from actually running the tool on the log above, and the self-test checks the encode/decode round trip.
-<!-- deploy attempt 3 -->
+<!-- deploy attempt 4 -->
